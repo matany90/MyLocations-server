@@ -10,7 +10,8 @@ module.exports = (app) => {
     app.get('/auth/google/callback',
         //passport.authenticate('google'),
         (req, res) => {
-            res.redirect('https://gentle-shelf-52680.herokuapp.com/categories');
+            res.send(req)
+           // res.redirect('https://gentle-shelf-52680.herokuapp.com/categories');
         }
     );
 
