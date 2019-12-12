@@ -11,7 +11,7 @@ module.exports = (app) => {
         passport.authenticate('google'),
         (req, res) => {
             //res.send('test')
-           res.redirect('https://gentle-shelf-52680.herokuapp.com/categories');
+           res.redirect('/categories');
         }
     );
 
