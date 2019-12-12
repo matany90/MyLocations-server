@@ -20,11 +20,10 @@ const LandingPage = ({ classes }) => (
             <Typography variant="h6" gutterBottom>
             Collect all your favorite Categories
             </Typography>
-             <a href="/auth/google">
+             <a href="/auth/google">GOOGLE</a>
             <div className={classes.bigAvatarContainer}>
             <Avatar alt="Landing Avatar" src={image} className={classes.bigAvatar} />
             </div>
-            </a>
           </Grid>    
 )
 
