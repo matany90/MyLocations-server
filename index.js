@@ -32,6 +32,7 @@ app.use(bodyParser.json()); //make POST req include the body to req obj
 /* app middleware*/
 
 require('./routes/authRoutes')(app);
+require('./routes/categoriesRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
     /* Express will serve up production assets

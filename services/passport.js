@@ -26,8 +26,6 @@ passport.deserializeUser((id, done) => {
     proxy: true
 },
     async (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
-        // done(null, profile);
         const existingUser = await User.findOne({ googleId: profile.id });
         if (existingUser) {
             //user already exists

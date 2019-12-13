@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { fetchCategories, fetchLocations } from '../actions';
+import { fetchCategories, fetchLocations, fetchUser } from '../actions';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
 import BottomNav from '../components/BottomNav';
@@ -10,11 +10,14 @@ import LocationsList from '../components/LocationsList';
 import AddLocation from '../components/AddLocation';
 import LocationListItem from '../components/LocationListItem';
 import LandingPage from '../components/LandingPage';
+import axios from 'axios';
 
 class App extends Component {
     componentDidMount() {
-        this.props.fetchCategories();
-        this.props.fetchLocations();
+        const { fetchCategories, fetchLocations } = this.props;
+        this.props.fetchUser(fetchCategories, fetchLocations);
+        //this.props.fetchCategories();
+        //this.props.fetchLocations();
     }
 
     render() {
@@ -40,4 +43,4 @@ const style = theme => ({
     toolbar: theme.mixins.toolbar,
 });
 
-export default connect(null, {fetchCategories, fetchLocations})(withStyles(style)(App));
+export default connect(null, {fetchCategories, fetchLocations, fetchUser})(withStyles(style)(App));
