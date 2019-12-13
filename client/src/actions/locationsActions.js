@@ -5,19 +5,10 @@ import {LOCATION_TEXT_CHANGED, ADDRESS_TEXT_CHANGED, CATEGORY_SLIDER_CHANGED,
       import axios from 'axios';
 
  export const fetchLocations = (locations)  => {
-    // let locations = localStorage.getItem('locations');
-    // locations = locations ? JSON.parse(locations) : {};
-
     return { type: FETCH_LOCATIONS, payload: locations };
 }
 
 export const addLocation = (name, address, category, coordByDrag,  callback) => async dispatch => {
-    // let locations = localStorage.getItem('locations');
-    // locations = locations ? JSON.parse(locations) : {};
-    // locations[name] = { name, address, category, coordByDrag };
-    // localStorage.setItem('locations', JSON.stringify(locations));
-    // console.log(locations);
-    console.log(coordByDrag)
     const { data } = await axios.post('/api/locations/addLocation', { name, address, category, coordByDrag });
 
     dispatch({ type: ADD_LOCATION, payload: data.locations});

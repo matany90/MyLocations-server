@@ -6,5 +6,5 @@ export const fetchUser = (fetchCategoriesCb, fetchLocationsCb) => async dispatch
     fetchCategoriesCb(data.categories);
     fetchLocationsCb(data.locations);
 
-    dispatch({ type: FETCH_USER, payload: data.user });
+    dispatch({ type: FETCH_USER, payload: data });
 }
