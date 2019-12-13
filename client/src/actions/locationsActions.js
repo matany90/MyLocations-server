@@ -2,21 +2,25 @@ import {LOCATION_TEXT_CHANGED, ADDRESS_TEXT_CHANGED, CATEGORY_SLIDER_CHANGED,
      FETCH_LOCATIONS, ADD_LOCATION, CHECKBOX_CLICKED, LOCATION_FILER_BY_CATEGORY,
      REMOVE_LOCATION_CLICKED, DELETE_LOCATION, COORD_BY_DRAG }
       from '../actions/types';
+      import axios from 'axios';
 
- export const fetchLocations = ()  => {
-    let locations = localStorage.getItem('locations');
-    locations = locations ? JSON.parse(locations) : {};
+ export const fetchLocations = (locations)  => {
+    // let locations = localStorage.getItem('locations');
+    // locations = locations ? JSON.parse(locations) : {};
 
     return { type: FETCH_LOCATIONS, payload: locations };
 }
 
-export const addLocation = (name, address, category, coordByDrag,  callback) => dispatch => {
-    let locations = localStorage.getItem('locations');
-    locations = locations ? JSON.parse(locations) : {};
-    locations[name] = { name, address, category, coordByDrag };
-    localStorage.setItem('locations', JSON.stringify(locations));
+export const addLocation = (name, address, category, coordByDrag,  callback) => async dispatch => {
+    // let locations = localStorage.getItem('locations');
+    // locations = locations ? JSON.parse(locations) : {};
+    // locations[name] = { name, address, category, coordByDrag };
+    // localStorage.setItem('locations', JSON.stringify(locations));
+    // console.log(locations);
+    console.log(coordByDrag)
+    const { data } = await axios.post('/api/locations/addLocation', { name, address, category, coordByDrag });
 
-    dispatch({ type: ADD_LOCATION, payload: locations});
+    dispatch({ type: ADD_LOCATION, payload: data.locations});
     callback();
 }
 
@@ -50,13 +54,14 @@ export const onRemoveLocationClick = () => {
     return {type: REMOVE_LOCATION_CLICKED, payload: true}
 }
 
-export const deleteLocation = (name) => {
-    let locations = localStorage.getItem('locations');
-    locations = locations ? JSON.parse(locations) : {};
-    delete locations[name]
-    localStorage.setItem('locations', JSON.stringify(locations));
+export const deleteLocation = (name) => async dispatch => {
+    // let locations = localStorage.getItem('locations');
+    // locations = locations ? JSON.parse(locations) : {};
+    // delete locations[name]
+    // localStorage.setItem('locations', JSON.stringify(locations));
+    const { data } = await axios.post('/api/locations/deleteLocation', { name });
 
-    return {type: DELETE_LOCATION, payload: locations};
+    dispatch({ type: DELETE_LOCATION, payload: data.locations });
 }
 
 export const onDragendComplete = (coord) => {
