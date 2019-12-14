@@ -71,7 +71,7 @@ class Header extends Component {
             <div className={classes.root}>
                 <AppBar position="fixed" color="primary" className={classes.appBar}>
                     <Toolbar>
-                    {path !== '' ? 
+                    {path.includes('locations') || path.includes('categories') ? 
                     <a href="/api/logout" style={{textDecoration: 'none', display: 'flex', color: 'white'}}>
                     <ExitToAppIcon className={classes.extendedIcon} />
                     <Typography>
