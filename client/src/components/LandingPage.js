@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import { connect } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Avatar from '@material-ui/core/Avatar';
 import image from '../res/img/img2.jpg'
-import GoogleButton from 'react-google-button'
-import { Link, Redirect   } from 'react-router-dom'; 
+import { FacebookLoginButton, GoogleLoginButton, GithubLoginButton  } from "react-social-login-buttons";
 import '../assets/css/LandingPage.css'
 
 class LandingPage extends Component {
@@ -20,10 +15,15 @@ class LandingPage extends Component {
         <div className="subTitle textColor">We'll help you remember all your favorite locations</div>
         <div className="subTitle textColor">Save your own favorite Locations using Google-Maps</div>
         <div className="subTitle textColor">Collect all your favorite Categories</div>
-        <a href="/auth/google" className="googleButton">
-        <GoogleButton />
+        <a href="/auth/google" className="button mr-top-5vh">
+        <GoogleLoginButton  />
          </a>
-         <a href="/auth/facebook">FACEBOOK</a>
+         <a href="/auth/facebook"  className="button mr-top-10">
+         <FacebookLoginButton />
+         </a>
+         <a href="/auth/github"  className="button mr-top-10">
+         <GithubLoginButton />
+         </a>
       </div>
     );
   }

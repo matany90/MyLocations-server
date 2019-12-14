@@ -25,6 +25,16 @@ module.exports = (app) => {
         }
     );
 
+    app.get('/auth/github', passport.authenticate('github'))
+
+    app.get('/auth/github/callback',
+        passport.authenticate('github'),
+        (req, res) => {
+            //res.send('test')
+           res.redirect('/categories');
+        }
+    );
+
     app.get('/api/current_user', (req, res) => {
         res.send(req.user);
     })
