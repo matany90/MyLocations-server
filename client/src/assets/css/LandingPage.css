@@ -9,6 +9,11 @@ body {
     align-items: center
 }
 
+.googleButton {
+    margin-top: 10vh;
+    text-decoration:none;
+}
+
 .title {
     font-size: 10vh;
     margin-top: 10vh;
