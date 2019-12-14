@@ -1,13 +1,18 @@
-## Web application I developed in React.js Framework
+## Web application I developed in React.js Framework + Node.js with Express + MongoDB
 
 The app helps you save your favorite categories and locations.
 You can save a location by dragging the map's marker on the map.
 
 Technologies I used:
-- React
+- React.js
 - Redux
-- All data model saved to local storage
+- Node with Express
+- MongoDB with mongoose
+- Passport.js API for OAuth (with Google, Facebook and Github)
 - Google-maps third-party API
+
+### Landing Page:
+![alt text](https://imgur.com/S3ZA5iw.png)
 
 ### Categories List:
 ![alt text](https://imgur.com/mpk2N75.png)
