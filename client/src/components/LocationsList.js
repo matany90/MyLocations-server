@@ -168,7 +168,8 @@ const styles = theme => ({
 
 const mapStateToProps = (state) => {
     const { locations, isCheckBoxClicked, filterCategoryValue, isRemoveLocationClicked } = state.locations;
-    const categoriesNames = Object.keys(state.categories.categories);
+    console.log(state)
+    const categoriesNames = state.categories.categories ? Object.keys(state.categories.categories) : [];
     let orderedLocations = _.orderBy(locations, [location => location.name.toLowerCase()], ['asc']);
 
     orderedLocations = _.filter(orderedLocations, (val) => {

@@ -58,6 +58,8 @@ class Header extends Component {
                     </Button>
                     </Grid>
                 );
+                case "locations/addLocation":
+                    return null;
             default:
                 return (
                     <NavLink to="/" style={{ textDecoration: 'none', color: 'unset', display: 'flex' }}>
@@ -73,6 +75,7 @@ class Header extends Component {
     render() {
         const { classes } = this.props;
         const path = this.props.location.pathname.slice(1);
+        console.log(path)
         return (
             <div className={classes.root}>
                 <AppBar position="fixed" color="primary" className={classes.appBar}>

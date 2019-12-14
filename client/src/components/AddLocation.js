@@ -160,7 +160,7 @@ const styles = theme => ({
 
 const mapStateToProps = ({ locations, categories }) => {
     const { locationName, addressName, categoryNameChoosed, coordByDrag } = locations;
-    const categoriesNames = Object.keys(categories.categories);
+    const categoriesNames = categories.categories ? Object.keys(categories.categories) : [];
 
     return { locationName, addressName, categoriesNames, categoryNameChoosed, coordByDrag }
 }
