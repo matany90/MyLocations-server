@@ -15,10 +15,10 @@ Technologies I used:
 ![alt text](https://imgur.com/S3ZA5iw.png)
 
 ### Categories List:
-![alt text](https://imgur.com/mpk2N75.png)
+![alt text](https://imgur.com/9uIAxxH.png)
 
 ### Locations List:
-![alt text](https://i.imgur.com/0nLsMqy.png)
+![alt text](https://imgur.com/MIwfhh6.png)
 
 ### Add Location:
 ![alt text](https://i.imgur.com/EisPdrF.png)
