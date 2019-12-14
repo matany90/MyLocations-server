@@ -58,17 +58,8 @@ class Header extends Component {
                     </Button>
                     </Grid>
                 );
-                case "locations/addLocation":
-                    return null;
             default:
-                return (
-                    <NavLink to="/" style={{ textDecoration: 'none', color: 'unset', display: 'flex' }}>
-                    <img src={logoImg}  className="imgLogo" alt="Smiley face" />
-                    <Typography variant="h6" style={{ marginTop: '13px', marginLeft: '2px'}}>
-                            MyLocations
-                    </Typography>
-                    </NavLink>
-                )
+                return null;
         }
     }
 
@@ -87,7 +78,13 @@ class Header extends Component {
                     Logout
                     </Typography>
                     </a> 
-                    : null}
+                    : 
+                    <NavLink to="/" style={{ textDecoration: 'none', color: 'unset', display: 'flex' }}>
+                    <img src={logoImg}  className="imgLogo" alt="Smiley face" />
+                    <Typography variant="h6" style={{ marginTop: '13px', marginLeft: '2px'}}>
+                            MyLocations
+                    </Typography>
+                    </NavLink>}
                         {this.renderContent()}
                     </Toolbar>
                 </AppBar>
