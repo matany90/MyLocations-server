@@ -5,7 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import image from '../res/img/img2.jpg'
-import _ from 'lodash';
+import GoogleButton from 'react-google-button'
+import { Link, Redirect   } from 'react-router-dom'; 
+import '../assets/css/LandingPage.css'
 
 class LandingPage extends Component {
 
@@ -13,24 +15,15 @@ class LandingPage extends Component {
     const { classes } = this.props;
 
     return (
-      <Grid container justify="center" alignItems="center" direction="column">
-        <Typography variant="h4" gutterBottom className={classes.titleStyle}>
-          Welcome to MyLocations
-      </Typography>
-        <Typography variant="h6" gutterBottom>
-          We'll help you remember all your favorite locations
-      </Typography>
-        <Typography variant="h6" gutterBottom>
-          Save your own favorite Locations using Google-Maps
-      </Typography>
-        <Typography variant="h6" gutterBottom>
-          Collect all your favorite Categories
-      </Typography>
-        <a href="/auth/google">GOOGLE</a>
-        <div className={classes.bigAvatarContainer}>
-          <Avatar alt="Landing Avatar" src={image} className={classes.bigAvatar} />
-        </div>
-      </Grid>
+      <div className="container" style={{height: '100vh', backgroundImage: `url(${image})`}}>
+        <div className="title textColor">Welcome to MyLocations</div>
+        <div className="subTitle textColor">We'll help you remember all your favorite locations</div>
+        <div className="subTitle textColor">Save your own favorite Locations using Google-Maps</div>
+        <div className="subTitle textColor">Collect all your favorite Categories</div>
+        <GoogleButton
+        onClick={() => <Redirect push to="/auth/google" /> }
+         />
+      </div>
     );
   }
 }

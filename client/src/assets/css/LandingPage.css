@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.title {
+    font-size: 10vh;
+    margin-top: 10vh;
+}
+
+.subTitle {
+    font-size: 5vh;
+    margin-top: 5vh;
+}
+
+.textColor {
+    color: white;
+    text-shadow: 2px 0 0 #673ab7, -2px 0 0 #673ab7, 0 2px 0 #673ab7, 0 -2px 0 #673ab7, 1px 1px #673ab7, -1px -1px 0 #673ab7, 1px -1px 0 #673ab7, -1px 1px 0 #673ab7;
+}
