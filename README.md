@@ -1,19 +1,27 @@
-## Web application I developed in React.js Framework
+## Web application I developed in React.js Framework + Node.js with Express + MongoDB
 
 The app helps you save your favorite categories and locations.
 You can save a location by dragging the map's marker on the map.
 
+Check-out the deployment link: https://my-locations-app-matan-client.herokuapp.com
+
 Technologies I used:
-- React
+- React.js
 - Redux
-- All data model saved to local storage
+- Node with Express
+- MongoDB with mongoose
+- Passport.js API for OAuth (with Google, Facebook and Github)
 - Google-maps third-party API
+- Deployed to Heroku
+
+### Landing Page:
+![alt text](https://imgur.com/pFO3i5o.png)
 
 ### Categories List:
-![alt text](https://imgur.com/mpk2N75.png)
+![alt text](https://imgur.com/9uIAxxH.png)
 
 ### Locations List:
-![alt text](https://i.imgur.com/0nLsMqy.png)
+![alt text](https://imgur.com/MIwfhh6.png)
 
 ### Add Location:
 ![alt text](https://i.imgur.com/EisPdrF.png)
