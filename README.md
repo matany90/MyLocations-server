@@ -3,6 +3,8 @@
 The app helps you save your favorite categories and locations.
 You can save a location by dragging the map's marker on the map.
 
+Check-out the deployment link: https://my-locations-app-matan-client.herokuapp.com
+
 Technologies I used:
 - React.js
 - Redux
@@ -10,6 +12,7 @@ Technologies I used:
 - MongoDB with mongoose
 - Passport.js API for OAuth (with Google, Facebook and Github)
 - Google-maps third-party API
+- Deployed to Heroku
 
 ### Landing Page:
 ![alt text](https://imgur.com/pFO3i5o.png)
