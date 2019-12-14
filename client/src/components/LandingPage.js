@@ -23,6 +23,7 @@ class LandingPage extends Component {
         <a href="/auth/google" className="googleButton">
         <GoogleButton />
          </a>
+         <a href="/auth/facebook">FACEBOOK</a>
       </div>
     );
   }
