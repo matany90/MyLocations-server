@@ -12,8 +12,8 @@ Technologies I used:
 - Google-maps third-party API
 
 ### Landing Page:
-![alt text](https://imgur.com/S3ZA5iw.png)
-
+![alt text](https://imgur.com/pFO3i5o.png)
+https://imgur.com/S3ZA5iw.png
 ### Categories List:
 ![alt text](https://imgur.com/9uIAxxH.png)
 
