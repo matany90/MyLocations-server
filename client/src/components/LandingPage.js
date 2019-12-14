@@ -15,6 +15,7 @@ class LandingPage extends Component {
         <div className="subTitle textColor">We'll help you remember all your favorite locations</div>
         <div className="subTitle textColor">Save your own favorite Locations using Google-Maps</div>
         <div className="subTitle textColor">Collect all your favorite Categories</div>
+        <div className="subTitle textColor">First, Sign-in:</div>
         <a href="/auth/google" className="button mr-top-5vh">
         <GoogleLoginButton  />
          </a>

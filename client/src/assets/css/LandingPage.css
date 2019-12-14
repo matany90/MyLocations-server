@@ -21,6 +21,11 @@ body {
     margin-top: 10px;
 }
 
+.imgLogo {
+    height: 40px;
+    widows: 40px;
+}
+
 .title {
     font-size: 10vh;
     margin-top: 10vh;

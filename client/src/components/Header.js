@@ -11,6 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import logoImg from '../../src/res/img/logo.png'
 import { onRemoveCategoryClick, onRemoveLocationClick, DialogEvent } from '../actions';
 
 class Header extends Component {
@@ -59,8 +60,9 @@ class Header extends Component {
                 );
             default:
                 return (
-                    <NavLink to="/" style={{ textDecoration: 'none', color: 'unset' }}>
-                    <Typography variant="h6">
+                    <NavLink to="/" style={{ textDecoration: 'none', color: 'unset', display: 'flex' }}>
+                    <img src={logoImg}  className="imgLogo" alt="Smiley face" />
+                    <Typography variant="h6" style={{ marginTop: '13px', marginLeft: '2px'}}>
                             MyLocations
                     </Typography>
                     </NavLink>
