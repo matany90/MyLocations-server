@@ -15,7 +15,7 @@ class LandingPage extends Component {
     const { classes } = this.props;
 
     return (
-      <div className="container" style={{height: '100vh', backgroundImage: `url(${image})`}}>
+      <div className="container" style={{height: '100vh', backgroundImage: `url(${image})`, backgroundSize: 'cover'}}>
         <div className="title textColor">Welcome to MyLocations</div>
         <div className="subTitle textColor">We'll help you remember all your favorite locations</div>
         <div className="subTitle textColor">Save your own favorite Locations using Google-Maps</div>
